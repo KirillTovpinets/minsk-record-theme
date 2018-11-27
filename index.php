@@ -6,59 +6,15 @@
             <hr class="divider">
             <div class="section-content">
                 <div class="row">
+                    <?php foreach(getServiceList() as $service): ?>
                     <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 record-sevice service">
                         <div class="icon"></div>
-                        <h3 class="title">Запись</h3>
+                        <h3 class="title"><?php echo $service->post_title; ?></h3>
                         <div class="description">
-                            <p>У нас в студии можно записать голос, гитары, барабаны, и прочие музыкальные инструменты.
-                                    Мы используем только самое качественное оборудование и микрофоны, а студийное помещение обработано специальными звукопоглащающими материалами, благодаря чему звук вашего голоса или инструмента будет чистым и четким.</p>
+                            <p><?php echo $service->post_excerpt; ?></p>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 compound-service service">
-                        <div class="icon"></div>
-                        <h3 class="title">Сведение</h3>
-                        <div class="description">
-                            <p>
-                                Сведение – это не только искусство, но и ключевой этап, который превращает набор дорожек в законченное музыкальное произведение. Хороший микс поможет выявить в музыке все самое лучшее: подчеркнуть наиболее важные элементы композиции, добавить нужные эффекты, отредактировать нужные инструменты и голос.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 mastering-service service">
-                        <div class="icon"></div>
-                        <h3 class="title">Мастеринг</h3>
-                        <div class="description">
-                            <p>
-                                Мастеринг - это комплекс процессов, направленных на улучшение звучания финальной сведенной дорожки и подгонку ее под определенный стандарт. Например "выравнивание" треков в альбоме по громкости и по частотным характеристикам. После мастеринга трек будет звучать так же мощно, широко и плотно, как и другие композиции.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 arrangement-service service">
-                        <div class="icon"></div>
-                        <h3 class="title">Аранжировка</h3>
-                        <div class="description">
-                            <p>
-                                Minim consectetur ad duis sint qui sunt culpa. Exercitation Lorem proident deserunt qui. Commodo labore labore amet ad dolore. Labore dolor labore qui proident in ea deserunt do dolore fugiat in cillum. Dolore dolor ad nulla sit labore ullamco veniam qui do non fugiat duis aliqua. Dolore et officia eiusmod duis dolore ut eu.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 sound-service service">
-                        <div class="icon"></div>
-                        <h3 class="title">Озвучка видеороликов и фильмов</h3>
-                        <div class="description">
-                            <p>
-                                Minim consectetur ad duis sint qui sunt culpa. Exercitation Lorem proident deserunt qui. Commodo labore labore amet ad dolore. Labore dolor labore qui proident in ea deserunt do dolore fugiat in cillum. Dolore dolor ad nulla sit labore ullamco veniam qui do non fugiat duis aliqua. Dolore et officia eiusmod duis dolore ut eu.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 song-service service">
-                        <div class="icon"></div>
-                        <h3 class="title">Песни "под ключ"</h3>
-                        <div class="description">
-                            <p>
-                                Minim consectetur ad duis sint qui sunt culpa. Exercitation Lorem proident deserunt qui. Commodo labore labore amet ad dolore. Labore dolor labore qui proident in ea deserunt do dolore fugiat in cillum. Dolore dolor ad nulla sit labore ullamco veniam qui do non fugiat duis aliqua. Dolore et officia eiusmod duis dolore ut eu.
-                            </p>
-                        </div>
-                    </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>
@@ -85,84 +41,85 @@
             </div>
         </div>
     </section>
+    <section><?php echo do_shortcode('[gallery size="large" ids="18,19,20,21,22,23"]');?></section>
     <section class="section-block how-we-work" id="works">
-            <h3 class="section-title">Наши работы</h3>
-            <hr class="divider">
-                            <div class="row">
-                                    <div class="col-md-12 p-0 audio-container">
-                                            <div class="row">
-                                                    <div class="col-md-3 p-0 track">
-                                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/tracks/bahroma-kamen.jpg" alt="" class="logo">
-                                                            <div class="play-container d-flex align-items-center justify-content-center">
-                                                                    <button class="play-btn animated"><i class="fas fa-play"></i></button>
-                                                                    <button class="stop-btn"><i class="fas fa-pause"></i></button>
-                                                            </div>
-                                                            <audio src="<?php echo get_template_directory_uri(); ?>/assets/tracks/BAHROMA - Камень.mp3"></audio>
-                                                    </div>
-                                                    <div class="col-md-3 p-0 track">
-                                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/tracks/Kate Aduhkina.jpg" alt="" class="logo">
-                                                            <div class="play-container d-flex align-items-center justify-content-center">
-                                                                    <button class="play-btn animated"><i class="fas fa-play"></i></button>
-                                                                    <button class="stop-btn"><i class="fas fa-pause"></i></button>
-                                                            </div>
-                                                            <audio src="<?php echo get_template_directory_uri(); ?>/assets/tracks/Катя Адушкина - Beauty Bomb.mp3"></audio>
-                                                    </div>
-                                                    <div class="col-md-3 p-0 track">
-                                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/tracks/kristian kostov - the one.jpg" alt="" class="logo">
-                                                            <div class="play-container d-flex align-items-center justify-content-center">
-                                                                    <button class="play-btn animated"><i class="fas fa-play"></i></button>
-                                                                    <button class="stop-btn"><i class="fas fa-pause"></i></button>
-                                                            </div>
-                                                            <audio src="<?php echo get_template_directory_uri(); ?>/assets/tracks/Kristian Kostov - The One.mp3"></audio>
-                                                    </div>
-                                                    <div class="col-md-3 p-0 track">
-                                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/tracks/Lacky4-nadojelo.jpg" alt="" class="logo">
-                                                            <div class="play-container d-flex align-items-center justify-content-center">
-                                                                    <button class="play-btn animated"><i class="fas fa-play"></i></button>
-                                                                    <button class="stop-btn"><i class="fas fa-pause"></i></button>
-                                                            </div>
-                                                            <audio src="<?php echo get_template_directory_uri(); ?>/assets/tracks/ Lucky4 - Надоело.mp3"></audio>
-                                                    </div>
-                                            </div>
-                                            <div class="row">
-                                                    <div class="col-md-3 p-0 track">
-                                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/tracks/Machete - krepche menja derzhi.jpg" alt="" class="logo">
-                                                            <div class="play-container d-flex align-items-center justify-content-center">
-                                                                    <button class="play-btn animated"><i class="fas fa-play"></i></button>
-                                                                    <button class="stop-btn"><i class="fas fa-pause"></i></button>
-                                                            </div>
-                                                            <audio src="<?php echo get_template_directory_uri(); ?>/assets/tracks/МАЧЕТЕ - Крепче меня держи.mp3"></audio>
-                                                    </div>
-                                                    <div class="col-md-3 p-0 track">
-                                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/tracks/Max barskih - vspominats.jpg" alt="" class="logo">
-                                                            <div class="play-container d-flex align-items-center justify-content-center">
-                                                                    <button class="play-btn animated"><i class="fas fa-play"></i></button>
-                                                                    <button class="stop-btn"><i class="fas fa-pause"></i></button>
-                                                            </div>
-                                                            <audio src="<?php echo get_template_directory_uri(); ?>/assets/tracks/MAX BARSKIH - Вспоминать.mp3"></audio>
-                                                    </div>
-                                                    <div class="col-md-3 p-0 track">
-                                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/tracks/O.Torvald.jpg" alt="" class="logo">
-                                                            <div class="play-container d-flex align-items-center justify-content-center">
-                                                                    <button class="play-btn animated"><i class="fas fa-play"></i></button>
-                                                                    <button class="stop-btn"><i class="fas fa-pause"></i></button>
-                                                            </div>
-                                                            <audio src="<?php echo get_template_directory_uri(); ?>/assets/tracks/O.Torvald - TIME.mp3"></audio>
-                                                    </div>
-                                                    <div class="col-md-3 p-0 track">
-                                                            <img src="<?php echo get_template_directory_uri(); ?>/assets/tracks/radiovolna.jpg" alt="" class="logo">
-                                                            <div class="play-container d-flex align-items-center justify-content-center">
-                                                                    <button class="play-btn animated"><i class="fas fa-play"></i></button>
-                                                                    <button class="stop-btn"><i class="fas fa-pause"></i></button>
-                                                            </div>
-                                                            <audio src="<?php echo get_template_directory_uri(); ?>/assets/tracks/РАДИОВОЛНА - Поздно.mp3"></audio>
-                                                    </div>
-                                            </div>
-                                    </div>
-                                    <div class="col-md-12 p-0 video-container">
-                                            <div class="youtube-container" id="player"></div>
-                                    </div>
-                            </div>
+        <h3 class="section-title">Наши работы</h3>
+        <hr class="divider">
+        <div class="row">
+                <div class="col-md-12 p-0 audio-container">
+                        <div class="row">
+                                <div class="col-md-3 p-0 track">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/tracks/bahroma-kamen.jpg" alt="" class="logo">
+                                        <div class="play-container d-flex align-items-center justify-content-center">
+                                                <button class="play-btn animated"><i class="fas fa-play"></i></button>
+                                                <button class="stop-btn"><i class="fas fa-pause"></i></button>
+                                        </div>
+                                        <audio src="<?php echo get_template_directory_uri(); ?>/assets/tracks/BAHROMA - Камень.mp3"></audio>
+                                </div>
+                                <div class="col-md-3 p-0 track">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/tracks/Kate Aduhkina.jpg" alt="" class="logo">
+                                        <div class="play-container d-flex align-items-center justify-content-center">
+                                                <button class="play-btn animated"><i class="fas fa-play"></i></button>
+                                                <button class="stop-btn"><i class="fas fa-pause"></i></button>
+                                        </div>
+                                        <audio src="<?php echo get_template_directory_uri(); ?>/assets/tracks/Катя Адушкина - Beauty Bomb.mp3"></audio>
+                                </div>
+                                <div class="col-md-3 p-0 track">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/tracks/kristian kostov - the one.jpg" alt="" class="logo">
+                                        <div class="play-container d-flex align-items-center justify-content-center">
+                                                <button class="play-btn animated"><i class="fas fa-play"></i></button>
+                                                <button class="stop-btn"><i class="fas fa-pause"></i></button>
+                                        </div>
+                                        <audio src="<?php echo get_template_directory_uri(); ?>/assets/tracks/Kristian Kostov - The One.mp3"></audio>
+                                </div>
+                                <div class="col-md-3 p-0 track">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/tracks/Lacky4-nadojelo.jpg" alt="" class="logo">
+                                        <div class="play-container d-flex align-items-center justify-content-center">
+                                                <button class="play-btn animated"><i class="fas fa-play"></i></button>
+                                                <button class="stop-btn"><i class="fas fa-pause"></i></button>
+                                        </div>
+                                        <audio src="<?php echo get_template_directory_uri(); ?>/assets/tracks/ Lucky4 - Надоело.mp3"></audio>
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-3 p-0 track">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/tracks/Machete - krepche menja derzhi.jpg" alt="" class="logo">
+                                        <div class="play-container d-flex align-items-center justify-content-center">
+                                                <button class="play-btn animated"><i class="fas fa-play"></i></button>
+                                                <button class="stop-btn"><i class="fas fa-pause"></i></button>
+                                        </div>
+                                        <audio src="<?php echo get_template_directory_uri(); ?>/assets/tracks/МАЧЕТЕ - Крепче меня держи.mp3"></audio>
+                                </div>
+                                <div class="col-md-3 p-0 track">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/tracks/Max barskih - vspominats.jpg" alt="" class="logo">
+                                        <div class="play-container d-flex align-items-center justify-content-center">
+                                                <button class="play-btn animated"><i class="fas fa-play"></i></button>
+                                                <button class="stop-btn"><i class="fas fa-pause"></i></button>
+                                        </div>
+                                        <audio src="<?php echo get_template_directory_uri(); ?>/assets/tracks/MAX BARSKIH - Вспоминать.mp3"></audio>
+                                </div>
+                                <div class="col-md-3 p-0 track">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/tracks/O.Torvald.jpg" alt="" class="logo">
+                                        <div class="play-container d-flex align-items-center justify-content-center">
+                                                <button class="play-btn animated"><i class="fas fa-play"></i></button>
+                                                <button class="stop-btn"><i class="fas fa-pause"></i></button>
+                                        </div>
+                                        <audio src="<?php echo get_template_directory_uri(); ?>/assets/tracks/O.Torvald - TIME.mp3"></audio>
+                                </div>
+                                <div class="col-md-3 p-0 track">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/assets/tracks/radiovolna.jpg" alt="" class="logo">
+                                        <div class="play-container d-flex align-items-center justify-content-center">
+                                                <button class="play-btn animated"><i class="fas fa-play"></i></button>
+                                                <button class="stop-btn"><i class="fas fa-pause"></i></button>
+                                        </div>
+                                        <audio src="<?php echo get_template_directory_uri(); ?>/assets/tracks/РАДИОВОЛНА - Поздно.mp3"></audio>
+                                </div>
+                        </div>
+                </div>
+                <div class="col-md-12 p-0 video-container">
+                        <div class="youtube-container" id="player"></div>
+                </div>
+        </div>
     </section>
     <section class="section-block our-clients" id="clients">
         <div class="container">

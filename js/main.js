@@ -41,24 +41,15 @@ $(document).ready(function(){
         $('.is-playing').removeClass('is-playing');
     })
 
-    // $('.clients-slider').slick({
-    //     slidesToShow: 5,
-    //     lazyload:true,
-    //     arrows:false,
-    //     autoplay:true
-		// });
+    $('.track').hover(function () {
+        $(this).find('.animated').addClass('fadeInDown');
+    },function () {
+        $(this).find('.fadeInDown').addClass('fadeOutUp');
+        $(this).find('.fadeInDown').removeClass('fadeInDown');
+        const that = this;
+        setTimeout(() => {
+            $(that).find('.fadeOutUp').removeClass('fadeOutUp');
+        }, 1000);
+    })
 
-		$('.track').hover(function () {
-			$(this).find('.animated').addClass('fadeInDown');
-		},function () {
-			$(this).find('.fadeInDown').addClass('fadeOutUp');
-			$(this).find('.fadeInDown').removeClass('fadeInDown');
-			const that = this;
-			setTimeout(() => {
-				$(that).find('.fadeOutUp').removeClass('fadeOutUp');
-			}, 1000);
-		})
-		
-		// const audioHeight = $('.audio-container').outerHeight();
-		// $('.video-container').css("height", audioHeight);
 })

@@ -36,8 +36,15 @@ iframe{
 .section-block{
     padding: 100px 0px;
 }
-.section-block img{
+.section-block img,
+#gallery-1 img{
     width: 100%;
+    height:auto;
+    border:none !important;
+}
+#gallery-1 .gallery-item{
+    margin: 0 !important;
+    width: 33.33% !important;
 }
 .section-block .section-title{
     font-weight:bold;
